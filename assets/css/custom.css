@@ -1189,3 +1189,7 @@ padding: 0px;
             height: calc(100% - 23px);
         }
     }
+    
+    .text-orange {
+        color: orange !important;
+    }

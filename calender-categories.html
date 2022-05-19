@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Hotline Transporters Sacco | All invoices</title>
+    <title>KMTC calender categories</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Rental management system by Nouveta LTD" name="description" />
     <meta content="Kelvin Njuguna" name="author" />
@@ -304,13 +304,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Member invoices</h4>
+                                <h4 class="mb-sm-0 font-size-18">calender events categories</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Invoices</a></li>
-                                        <li class="breadcrumb-item active">Member invoices</li>
+                                        <li class="breadcrumb-item active">Calender events categories</li>
                                     </ol>
                                 </div>
 
@@ -325,12 +324,12 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                            Permit and Maintenance invoices
+                                            Calender categories
                                         </h4>
 
                                         <div class="d-flex">
                                             <a href="invoice-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3 text-capitalize">
-                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Create an invoice</span>
+                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Create A category</span>
                                             </a>
 
                                         </div>
@@ -348,19 +347,11 @@
                                             <thead class="table-light">
                                                 <tr class="table-dark">
 
-                                                    <th scope="col">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <label for="selectAll" class="d-none">Select All</label>
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
+                                                    <th scope="col" style="width: 30px;"></th>
+                                                    <th scope="col">Event types</th>
 
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col">Membership NO.</th>
-                                                    <th scope="col">Member</th>
-                                                    <th scope="col">Truck(s)</th>
-                                                    <th scope="col" class="text-right">Monthly Payable</th>
-                                                    <th scope="col" class="text-right">Amount Paid</th>
-                                                    <th scope="col" class="text-right">Reducing Bal.</th>
+                                                    <th scope="col" class="text-right">No. Of Events</th>
+
                                                     <th></th>
                                                 </tr>
                                             </thead>
@@ -368,45 +359,33 @@
                                                 <tr>
 
                                                     <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
-
-                                                        </div>
+                                                        1.
                                                     </td>
-                                                    <td class="text-capitalize text-nowrap">123-410</td>
                                                     <td class="text-capitalize text-nowrap">
-                                                        <p class="mb-0"><a href="member-details.html" title="View Details">Byron Njuguna</a></p>
-                                                    </td>
-                                                    <td>
-                                                        <a href="truck-details.html">KBG 123T</a>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 2,000</span>
+                                                        <label>
+                                                            <span class="mdi mdi-square-rounded font-18px me-2"></span>
+                                                            <span>Public Holidays</span>
+                                                        </label>
                                                     </td>
 
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold text-info">KES 1,500</span>
-                                                    </td>
+
+
 
                                                     <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold text-danger">KES 500</span>
+                                                        <span class="fw-semibold ">23</span>
                                                     </td>
 
                                                     <td>
                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
 
                                                                 <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Member</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-file-document-edit me-3 "></i>Change title</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-format-color-fill me-3 "></i>Change color</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View this Events</a>
 
                                                                 </div>
                                                             </div>
@@ -417,52 +396,183 @@
                                                 <tr>
 
                                                     <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
-
-                                                        </div>
+                                                        2.
                                                     </td>
-                                                    <td class="text-capitalize text-nowrap">123-410</td>
                                                     <td class="text-capitalize text-nowrap">
-                                                        <p class="mb-0"><a href="member-details.html" title="View Details">Gedion Gitau</a></p>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#">3 Trucks</a>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 2,000</span>
+                                                        <label>
+                                                            <span class="mdi mdi-square-rounded font-18px me-2 text-info"></span>
+                                                            <span>Strategic meetings</span>
+                                                        </label>
                                                     </td>
 
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold text-info">KES 1,500</span>
-                                                    </td>
+
+
 
                                                     <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold text-danger">KES 500</span>
+                                                        <span class="fw-semibold ">2</span>
                                                     </td>
 
                                                     <td>
                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
 
                                                                 <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Member</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-file-document-edit me-3 "></i>Change title</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-format-color-fill me-3 "></i>Change color</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View this Events</a>
 
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
+                                                <tr>
 
+                                                    <td>
+                                                        3.
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <label>
+                                                            <span class="mdi mdi-square-rounded font-18px me-2 text-success"></span>
+                                                            <span>Team building sessions</span>
+                                                        </label>
+                                                    </td>
+
+
+
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">32</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-file-document-edit me-3 "></i>Change title</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-format-color-fill me-3 "></i>Change color</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View this Events</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        3.
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <label>
+                                                            <span class="mdi mdi-square-rounded font-18px me-2 text-orange"></span>
+                                                            <span>Conference</span>
+                                                        </label>
+                                                    </td>
+
+
+
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">65</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-file-document-edit me-3 "></i>Change title</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-format-color-fill me-3 "></i>Change color</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View this Events</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        4.
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <label>
+                                                            <span class="mdi mdi-square-rounded font-18px me-2 text-danger"></span>
+                                                            <span>Trade shows and expos</span>
+                                                        </label>
+                                                    </td>
+
+
+
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">12</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-file-document-edit me-3 "></i>Change title</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-format-color-fill me-3 "></i>Change color</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View this Events</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        5.
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <label>
+                                                            <span class="mdi mdi-square-rounded font-18px me-2 text-primary"></span>
+                                                            <span>Networking sessions</span>
+                                                        </label>
+                                                    </td>
+
+
+
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">32</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-file-document-edit me-3 "></i>Change title</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-format-color-fill me-3 "></i>Change color</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View this Events</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
                                             </tbody>
                                             <tfoot class="table-dark">
                                                 <tr>
@@ -470,20 +580,10 @@
                                                     <td>
 
                                                     </td>
-                                                    <th class="text-capitalize text-nowrap" colspan="2">23 Members</th>
+                                                    <th class="text-capitalize text-nowrap">23 Event types</th>
 
-                                                    <th class="text-nowrap">63 Trucks</th>
+                                                    <th class="text-nowrap text-right">63 Trucks</th>
 
-                                                    <td class="text-nowrap text-right " colspan="">
-                                                        <span class="fw-semibold ">KES 3,000,000</span>
-                                                    </td>
-
-                                                    <td class="text-nowrap text-right " colspan="">
-                                                        <span class="fw-semibold ">KES 2,000,000</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right " colspan="">
-                                                        <span class="fw-semibold text-danger">KES 1,000,000</span>
-                                                    </td>
 
                                                     <td>
 
