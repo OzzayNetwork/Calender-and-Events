@@ -310,13 +310,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Add User</h4>
+                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Events distribution to members</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="user-register.html">Users</a></li>
-                                        <li class="breadcrumb-item active">New User</li>
+                                        <li class="breadcrumb-item active">Cases</li>
                                     </ol>
                                 </div>
 
@@ -327,100 +326,217 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
+                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
+                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                        <h4 class="card-title text-capitalize mb-0 ">
+                                            Cases and case files
+                                        </h4>
 
-                                        <div class="col-7">
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">First Name <strong class="text-danger">*</strong></label>
-                                                        <input type="text" class="form-control" id="" placeholder="Enter first name">
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Second Name <strong class="text-danger">*</strong></label>
-                                                        <input type="text" class="form-control" id="" placeholder="Enter second name">
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Other Name(s)</label>
-                                                        <input type="text" class="form-control" id="" placeholder="Enter other names">
-                                                    </div>
-                                                </div>
+                                        <div class="d-flex">
+                                            <a href="members-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3 d-none">
+                                                <i class="mdi  mdi-folder-plus  font-size-16"></i> <span class="pl-1 d-md-inline">Add An event</span>
+                                            </a>
 
-                                                <div class="col-4">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Department</label>
-                                                        <select class="form-control selectpicker" name="category" multiple title="Department" data-live-search="true">
-                                                           
-                                                            <option value="bg-danger">Finance</option>
-                                                            <option value="bg-success">Maintenance</option>
-                                                            <option value="bg-primary">Support Staff</option>
-                                                            
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-
-
-                                                <div class="col-4">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Work Title</label>
-                                                        <input type="text" class="form-control" id="" placeholder="Enter title">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-4">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">System Role</label>
-                                                        <select class="form-control selectpicker" name="category" multiple title="Select system role" data-live-search="true">
-                                                           
-                                                            <option value="bg-danger">Super Admin</option>
-                                                            <option value="bg-success">Normal User</option>
-                                                            
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-
-
-
-                                                <div class="col-4">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Email <strong class="text-danger">*</strong></label>
-                                                        <input type="email" class="form-control" id="" placeholder="email@email.com">
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Telephone Number <strong class="text-danger">*</strong></label>
-                                                        <input type="email" class="form-control" id="" placeholder="Phone number">
-                                                    </div>
-                                                </div>
-
+                                            <div class="text-sm-end">
+                                                <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3 text-capitalize"><i class="mdi mdi-plus label-icon"></i> Add a case</button>
                                             </div>
+
                                         </div>
-                                        <div class="col-5">
-                                            <div>
-                                                <div class="row justify-content-center mt-5">
-                                                    <img src="assets/images/verification-img.png" style="width:300px" alt="" class="img-fluid d-block">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 ">
-                                            <button type="button " class="btn btn-primary waves-effect waves-light ">
-                                                <i class="mdi mdi-check-all font-size-16 align-middle me-2 "></i> Add user
-                                            </button>
-                                        </div>
+
 
                                     </div>
-
+                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
+                                        <button type="button" class="btn btn-danger waves-effect btn-label waves-light me-3 d-none"><i class="bx  bx-trash label-icon"></i> Block</button>
+                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-plus label-icon"></i> Message Auctioneer(s)</button>
+                                    </div>
                                 </div>
+                                <div class="card-body">
+                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Case title</th>
+                                                <th>Case No.</th>
+                                                <th scope="col">Plaintiff</th>
+                                                <th scope="col">Defendant</th>
+                                                <th scope="col">Files</th>
+                                                <th scope="col">Created on</th>
+                                                <th scope="col">Case status</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-capitalize">1</td>
+                                                <td class="text-capitalize">
+                                                    <a href="case-files-percase.html">Exam irregularity</a>
+                                                </td>
+                                                <td>
+                                                    12345689
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    Ole Sankale
+                                                </td>
 
+                                                <td class="text-capitalize">
+                                                    Innocent Ochieng
+                                                </td>
+                                                <td>
+                                                    12
+                                                </td>
+                                                <td>
+                                                    12 Jan 2022
+                                                </td>
+                                                <td>
+                                                    <strong>Ongoing</strong>
+                                                </td>
+
+
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="case-files-percase.html"><i class="font-size-15 mdi mdi-file-eye me-3"></i>View Files</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-progress-close me-3"></i>Declare case as cleared</a>
+                                                            <a class="dropdown-item" data-toggle="modal" data-target=".add-file-modal" href="#"><i class="font-size-15  mdi mdi-text-box-plus me-3"></i>Add File</a>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-capitalize">2</td>
+                                                <td class="text-capitalize">
+                                                    <a href="case-files-percase.html">Damage of school property</a>
+                                                </td>
+                                                <td>
+                                                    12365
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    Fredrick Ouma
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Job Bonyo
+                                                </td>
+                                                <td>
+                                                    12
+                                                </td>
+                                                <td>
+                                                    20 Feb 2020
+                                                </td>
+                                                <td>
+                                                    <strong>Closed on 14 Mar 2021 </strong>
+                                                </td>
+
+
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="case-files-percase.html"><i class="font-size-15 mdi mdi-file-eye me-3"></i>View Files</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-progress-close me-3"></i>Declare case as cleared</a>
+                                                            <a class="dropdown-item" data-toggle="modal" data-target=".add-file-modal" href="#"><i class="font-size-15  mdi mdi-text-box-plus me-3"></i>Add File</a>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-capitalize">3</td>
+                                                <td class="text-capitalize">
+                                                    <a href="case-files-percase.html">Forging of School documents</a>
+                                                </td>
+                                                <td>
+                                                    2256
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    Sebastian Kiura
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Felix Owiti
+                                                </td>
+                                                <td>
+                                                    32
+                                                </td>
+                                                <td>
+                                                    20 Feb 2020
+                                                </td>
+                                                <td>
+                                                    <strong>Closed on 14 Mar 2021 </strong>
+                                                </td>
+
+
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="case-files-percase.html"><i class="font-size-15 mdi mdi-file-eye me-3"></i>View Files</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-progress-close me-3"></i>Declare case as cleared</a>
+                                                            <a class="dropdown-item" data-toggle="modal" data-target=".add-file-modal" href="#"><i class="font-size-15  mdi mdi-text-box-plus me-3"></i>Add File</a>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-capitalize">4</td>
+                                                <td class="text-capitalize">
+                                                    <a href="case-files-percase.html">Violent conduct</a>
+                                                </td>
+                                                <td>
+                                                    3685
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    Tabitha Wanjiru
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Wayne Wade
+                                                </td>
+                                                <td>
+                                                    32
+                                                </td>
+                                                <td>
+                                                    20 Feb 2020
+                                                </td>
+                                                <td>
+                                                    <strong>Closed on 14 Mar 2021 </strong>
+                                                </td>
+
+
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="case-files-percase.html"><i class="font-size-15 mdi mdi-file-eye me-3"></i>View Files</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-progress-close me-3"></i>Declare case as cleared</a>
+                                                            <a class="dropdown-item" data-toggle="modal" data-target=".add-file-modal" href="#"><i class="font-size-15  mdi mdi-text-box-plus me-3"></i>Add File</a>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <!-- end col -->
@@ -433,86 +549,44 @@
             <!-- End Page-content -->
 
             <!-- credit modal -->
-            <div class="modal fade issue-modal pb-5 credit-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade issue-modal pb-5 add-file-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Credit Note for Kelvin Njuguna</h5>
+                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Add a file</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="col-12">
                                 <address>
-                                    <strong>Landlord's Details</strong><br>
-                                     Kelvin Njuguna<br>
-                                    email@mail.com, 0704 549 859<br>                                   
-                                    Lion Rock Apartments
+                                    <strong>Case Details</strong><br>
+                                     <span class="case-title">Damage of Property</span><br>
+                                    Case No. <span class="case-no">23456</span><br>                                   
+                                   
                                     <br><br>
                                     <span class="today-date">1 Mar 2022</span><br>
-                                    <span class="fw-semibold">Being Created By </span> Alex Wanjala<br>
+                                    <span class="fw-semibold">Being Added By </span> Alex Wanjala<br>
                                 </address>
                             </div>
                             <div class="col-12">
                                 <div class="mb-4 ">
-                                    <label for="agreement-type">Debit Amount</label>
-                                    <input type="text" class="form-control" placeholder="Enter amount">
-                                </div>
-                            </div>
-
-
-                            <div class=" col-12 ">
-                                <div class="mb-4 ">
-                                    <label class="text-capitalize ">Debit this amount to a Tenant</label>
-                                    <div class="row ">
-                                        <div class="col-auto ">
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" value="yes" type="radio" name="debit-this" id="debit-yes">
-                                                <label class="form-check-label" for="debit-yes">
-                                                    Yes
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-auto ">
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" value="no" type="radio" name="debit-this" id="debit-no">
-                                                <label class="form-check-label" for="debit-no">
-                                                    No
-                                                </label>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-
-
-                                </div>
-                            </div>
-                            <div class="col-12 d-non debit-tenant-list d-none">
-                                <div class="mb-4 ">
-                                    <label for="agreement-type">Select the Tenant</label>
-                                    <select class="form-control selectpicker" title="Select tenant" data-live-search="true">
-                                        <option value="001" data-content="<span class='d-none'>001</span> Amos were">Amos were</option>
-                                        <option value="" data-content="<span class='badge badge-success file-no d-non'>002</span>Philip Mutua">Philip Mutua</option>
-                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>003</span>Sharon Wambui">Sharon Wambui</option>
-                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>004</span>Rita Kanana">Rita Kanana</option>
-                                        <option value="" data-content="<span class='badge badge-success file-nod-none'>005</span>Ernest Mburu">Ernest Mburu</option>
-                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>006</span>Latasha Tasha">Latasha Tasha</option>
-                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>007</span>Alex Wanjala">Alex Wanjala</option>
-                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>008</span>Sam Ochieng">Sam Ochieng</option>
-                                  </select>
-                                </div>
-                            </div>
-                            <div class="col-12 ">
-                                <div class="mb-4 ">
-                                    <label for="agreement-type ">Reason for creating the credit Note</label>
-                                    <textarea name=" " placeholder="Enter tenant 's reason for moving out" id="" cols="30" rows="3" class="form-control"></textarea>
+                                    <label for="agreement-type">Document Title</label>
+                                    <input type="text" class="form-control" placeholder="Enter Document's title">
                                 </div>
                             </div>
 
                             <div class="col-12">
-                                <div class="alert alert-warning" role="alert">
-                                    <i class="mdi mdi-alert-outline me-2 "></i> A message will be sent to the landlord on the followingCredit Note
+                                <div action="#" class="dropzone">
+                                    <div class="fallback">
+                                        <input name="file" type="file" multiple="multiple">
+                                    </div>
+                                    <div class="dz-message needsclick">
+                                        <div class="mb-3">
+                                            <i class="display-4 text-muted mdi mdi-file-document"></i>
+                                        </div>
+
+                                        <h6>Drop files here or click to upload.</h6>
+                                    </div>
                                 </div>
                             </div>
 
