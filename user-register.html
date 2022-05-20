@@ -7,12 +7,14 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Best Birdy | Connecting your to your world</title>
+    <title>KMTC calender categories</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Keep your finances and membership up to date" name="description" />
-    <meta content="Kelvin Njuguna Ndungu" name="author" />
+    <meta content="Rental management system by Nouveta LTD" name="description" />
+    <meta content="Kelvin Njuguna" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
+    <!-- droping file -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 
     <!-- DataTables -->
     <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
@@ -29,11 +31,11 @@
     <!-- custom Css-->
     <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
 
-
 </head>
 
 <body data-sidebar="dark">
 
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
     <!-- Loader -->
     <div id="preloader">
         <div id="status">
@@ -302,12 +304,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Transactions</h4>
+                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Events distribution to members</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Transactions</li>
+                                        <li class="breadcrumb-item active">Member Calender events</li>
                                     </ol>
                                 </div>
 
@@ -315,187 +317,189 @@
                         </div>
                     </div>
                     <!-- end page title -->
-
-                    <!-- eTransactions table -->
-
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Latest Transactions</h4>
-                                    <p>All transactions for <strong>Today</strong></p>
+                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+
+                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                        <h4 class="card-title text-capitalize mb-0 ">
+                                            System users
+                                        </h4>
+
+                                        <div class="d-flex">
+                                            <a href="members-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3 d-none">
+                                                <i class="mdi  mdi-folder-plus  font-size-16"></i> <span class="pl-1 d-md-inline">Add An event</span>
+                                            </a>
+
+                                            <div class="text-sm-end">
+                                                <select name='length_change' class="form-control selectpicker table-rows-selector show-tick btn btn-auto calendar-selecor" data-style="btn-success" data-live-search="true" title="Select a month">
+                                                    <option value='5'>Jan 2021</option>
+                                                    <option value='50' selected="true">Mar 2022</option>
+                                                    <option value='100'>Mar 2021</option>
+                                                    <option value='150'>Apr 2021</option>
+                                                    <option value='200'>May 2021</option>
+                                                    <option value='0'>Jun 2021</option>
+                                                    <option value='0'>Jul 2021</option>
+                                                    <option value='0'>Aug 2021</option>
+                                                    <option value='0'>Sep 2021</option>
+                                                    <option value='0'>Oct 2021</option>
+                                                    <option value='0'>Nov 2021</option>
+                                                    <option value='0'>Dec 2021</option>
+                                                    <option value='0'>Jan 2022</option>
+                                                    <option value='0'>Feb 2022</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
+                                        <button type="button" class="btn btn-danger waves-effect btn-label waves-light me-3 d-none"><i class="bx  bx-trash label-icon"></i> Block</button>
+                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-plus label-icon"></i> Message Auctioneer(s)</button>
+                                    </div>
                                 </div>
                                 <div class="card-body">
-
-
-
-
-                                    <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 table-striped">
-                                        <thead class="table-dark">
+                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
+                                        <thead class="table-light">
                                             <tr>
-                                                <th>Vehicle</th>
-                                                <th>Date</th>
-                                                <th>Paid By</th>
-                                                <th>Payment Method</th>
-                                                <th>Toll taker</th>
-                                                <th class="text-right">Amount</th>
-                                                <th>View details</th>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Name(s)</th>
+                                                <th>Contacts</th>
+                                                <th scope="col">Department</th>
+                                                <th scope="col">Role</th>
+                                                <th scope="col">Last seen</th>
+                                                <th></th>
                                             </tr>
                                         </thead>
-
-
-                                        <tbody class="table-striped">
+                                        <tbody>
                                             <tr>
-                                                <td class="">
-                                                    <p class="mb-0 pb-0"><strong>Motor Cycle</strong></p>
-                                                    <p class="mb-0 text-uppercase">UAX 134P</p>
+                                                <td class="text-capitalize">1</td>
+                                                <td class="text-capitalize">
+                                                    <a href="calender-personal.html">Kelvin Njuguna</a>
+                                                    <br>
+                                                    <small>Super Admin</small>
 
                                                 </td>
-                                                <td>2 Min ago</td>
                                                 <td>
-                                                    <a href="clients-profile.html">Mark Mirenda</a>
-                                                </td>
-                                                <td>
-                                                    <i class="mdi mdi-cash-multiple"></i> Cash
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 text-capitalize">
-                                                        <a href="taker-profile.html"><strong>Ann Kaguta</strong></a>
+                                                    <p class="text-muted mb-0">
+                                                        <a href="tell:0785905494">0785905494</a>
                                                     </p>
-                                                    <p class="mb-0 pb-0"> <a href="tel:0704500851">0754 500 851</a></p>
-                                                </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="1000">ugx 1,000</strong></td>
-                                                <td>
-                                                    <!-- Button trigger modal -->
-                                                    <p>
-                                                        <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                            View Details
-                                                        </button>
+                                                    <p class="mb-0">
+                                                        <a href="mailto:Antique253@gmail.com">Antique253@gmail.com</a>
                                                     </p>
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    IT department
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Head of IT department
+                                                </td>
+                                                <td>
+                                                    <strong class="text-success">Online</strong>
+                                                </td>
+
+
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye me-3"></i>View logs</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-pencil me-3"></i>Edit account</a>
+
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
-
                                             <tr>
-                                                <td class="">
-                                                    <p class="mb-0 pb-0"><strong>Salon Car</strong></p>
-                                                    <p class="mb-0 text-uppercase">UAH 404P</p>
+                                                <td class="text-capitalize">2.</td>
+                                                <td class="text-capitalize">
+                                                    <a href="calender-personal.html">Alex Wanjala</a>
+                                                    <br>
+                                                    <small>Super Admin</small>
 
                                                 </td>
-                                                <td>6 Min ago</td>
                                                 <td>
-                                                    <a href="clients-profile.html">Simon Kwiyenda</a>
-                                                </td>
-                                                <td>
-                                                    <i class="mdi mdi-cash-multiple"></i> Cash
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 text-capitalize">
-                                                        <a href="taker-profile.html"><strong>Mark Aratubo</strong></a>
+                                                    <p class="text-muted mb-0">
+                                                        <a href="tell:0785905494">0785905494</a>
                                                     </p>
-                                                    <p class="mb-0 pb-0"> <a href="tel:0734549800">0734 549 800</a></p>
-                                                </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="2000">ugx 2,000</strong></td>
-                                                <td>
-                                                    <!-- Button trigger modal -->
-                                                    <p>
-                                                        <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                            View Details
-                                                        </button>
+                                                    <p class="mb-0">
+                                                        <a href="mailto:Antique253@gmail.com">Antique253@gmail.com</a>
                                                     </p>
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    IT department
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Head of IT department
+                                                </td>
+                                                <td>
+                                                    <strong class="text-success">Online</strong>
+                                                </td>
+
+
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye me-3"></i>View logs</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-pencil me-3"></i>Edit account</a>
+
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
-
                                             <tr>
-                                                <td class="">
-                                                    <p class="mb-0 pb-0"><strong>Lorry</strong></p>
-                                                    <p class="mb-0 text-uppercase">UAZ 426U</p>
+                                                <td class="text-capitalize">3</td>
+                                                <td class="text-capitalize">
+                                                    <a href="calender-personal.html">Ken Kiptanui</a>
+                                                    <br>
+                                                    <small>Normal User</small>
 
                                                 </td>
-                                                <td>4 Min ago</td>
                                                 <td>
-                                                    <a href="clients-profile.html">Mary Ojok</a>
-                                                </td>
-                                                <td>
-                                                    <i class="mdi mdi-qrcode-scan"></i> Wallet tag
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 text-capitalize">
-                                                        <a href="taker-profile.html"><strong>Jane Murimbe</strong></a>
+                                                    <p class="text-muted mb-0">
+                                                        <a href="tell:0785905494">0785905494</a>
                                                     </p>
-                                                    <p class="mb-0 pb-0"> <a href="tel:0714549024">0714 549 024</a></p>
-                                                </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="3000">ugx 3,000</strong></td>
-                                                <td>
-                                                    <!-- Button trigger modal -->
-                                                    <p>
-                                                        <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                            View Details
-                                                        </button>
+                                                    <p class="mb-0">
+                                                        <a href="mailto:Antique253@gmail.com">Antique253@gmail.com</a>
                                                     </p>
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    IT department
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Head of IT department
+                                                </td>
+                                                <td>
+                                                    <strong class="text-success">Online</strong>
+                                                </td>
+
+
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye me-3"></i>View logs</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-pencil me-3"></i>Edit account</a>
+
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
-
-                                            <tr>
-                                                <td class="">
-                                                    <p class="mb-0 pb-0"><strong>Mini Bus</strong></p>
-                                                    <p class="mb-0 text-uppercase">UAB 473T</p>
-
-                                                </td>
-                                                <td>9 Min ago</td>
-                                                <td>
-                                                    <a href="clients-profile.html">Chris Mukisa</a>
-                                                </td>
-                                                <td>
-                                                    <i class="mdi mdi-cash-multiple"></i> Cash
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 text-capitalize">
-                                                        <a href="taker-profile.html"><strong>Lucy Kundaki</strong></a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0"> <a href="tel:0704552859">0704 552 859</a></p>
-                                                </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="1200">ugx 1,200</strong></td>
-                                                <td>
-                                                    <!-- Button trigger modal -->
-                                                    <p>
-                                                        <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                            View Details
-                                                        </button>
-                                                    </p>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="">
-                                                    <p class="mb-0 pb-0"><strong>Minibus</strong></p>
-                                                    <p class="mb-0 text-uppercase">UAL 155E</p>
-
-                                                </td>
-                                                <td>12 Min ago</td>
-                                                <td>
-                                                    <a href="clients-profile.html">Housen Mushema</a>
-                                                </td>
-                                                <td>
-                                                    <i class="mdi mdi-qrcode-scan"></i> Wallet tag
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 text-capitalize">
-                                                        <a href="taker-profile.html"><strong>Henry Bagiire</strong></a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0"> <a href="tel:0787549098">0787 549 098</a></p>
-                                                </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="2500">ugx 2,500</strong></td>
-                                                <td>
-                                                    <!-- Button trigger modal -->
-                                                    <p>
-                                                        <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                            View Details
-                                                        </button>
-                                                    </p>
-                                                </td>
-                                            </tr>
-
-
                                         </tbody>
                                     </table>
                                 </div>
@@ -510,192 +514,114 @@
             </div>
             <!-- End Page-content -->
 
-            <!-- Transaction Modal -->
-            <div class="modal fade transaction-detailModal" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- credit modal -->
+            <div class="modal fade issue-modal pb-5 credit-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="transaction-detailModalLabel">Transactions Details</h5>
+                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Credit Note for Kelvin Njuguna</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-
-
-                            <div class="table-responsive mt-4">
-                                <table class="table align-middle table-nowrap">
-                                    <tbody>
-                                        <tr>
-                                            <td style="width: 30%">
-                                                <p class="mb-0">Car Plate Number</p>
-                                            </td>
-                                            <td style="width: 25%">
-                                                <h5 class="mb-0 text-uppercase">UAG 1235p</h5>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p class="mb-0">Vehicle Category</p>
-                                            </td>
-                                            <td>
-                                                <h5 class="mb-0">Salon Car</h5>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p class="mb-0">Payment Date</p>
-                                            </td>
-                                            <td>
-                                                <h5 class="mb-0">22 Apr 2022 06:54PM</h5>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p class="mb-0">San Diego</p>
-                                            </td>
-                                            <td>
-                                                <h5 class="mb-0">1,026</h5>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <p class="mb-0 pb-0">Amount Paid</p>
-                                                <h3>UGX 2,000</h3>
-                                            </td>
-                                        </tr>
-                                        <TR>
-                                            <td col-span="2">
-                                                <p class="mb-2">Attended By<span class="text-primary"> Alex Sebeye</span></p>
-                                                <p class="mb-4">Toll taker's No. <span class="text-primary">0704549859</span></p>
-                                            </td>
-                                        </TR>
-                                    </tbody>
-                                </table>
+                            <div class="col-12">
+                                <address>
+                                    <strong>Landlord's Details</strong><br>
+                                     Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Lion Rock Apartments
+                                    <br><br>
+                                    <span class="today-date">1 Mar 2022</span><br>
+                                    <span class="fw-semibold">Being Created By </span> Alex Wanjala<br>
+                                </address>
                             </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Debit Amount</label>
+                                    <input type="text" class="form-control" placeholder="Enter amount">
+                                </div>
+                            </div>
+
+
+                            <div class=" col-12 ">
+                                <div class="mb-4 ">
+                                    <label class="text-capitalize ">Debit this amount to a Tenant</label>
+                                    <div class="row ">
+                                        <div class="col-auto ">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" value="yes" type="radio" name="debit-this" id="debit-yes">
+                                                <label class="form-check-label" for="debit-yes">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto ">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" value="no" type="radio" name="debit-this" id="debit-no">
+                                                <label class="form-check-label" for="debit-no">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-12 d-non debit-tenant-list d-none">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Select the Tenant</label>
+                                    <select class="form-control selectpicker" title="Select tenant" data-live-search="true">
+                                        <option value="001" data-content="<span class='d-none'>001</span> Amos were">Amos were</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-non'>002</span>Philip Mutua">Philip Mutua</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>003</span>Sharon Wambui">Sharon Wambui</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>004</span>Rita Kanana">Rita Kanana</option>
+                                        <option value="" data-content="<span class='badge badge-success file-nod-none'>005</span>Ernest Mburu">Ernest Mburu</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>006</span>Latasha Tasha">Latasha Tasha</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>007</span>Alex Wanjala">Alex Wanjala</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>008</span>Sam Ochieng">Sam Ochieng</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type ">Reason for creating the credit Note</label>
+                                    <textarea name=" " placeholder="Enter tenant 's reason for moving out" id="" cols="30" rows="3" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="mdi mdi-alert-outline me-2 "></i> A message will be sent to the landlord on the followingCredit Note
+                                </div>
+                            </div>
+
                         </div>
+
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button class="btn btn-primary">Submit Details</button>
                         </div>
+
                     </div>
+                    <!-- /.modal-content -->
                 </div>
+                <!-- /.modal-dialog -->
             </div>
-            <!-- end modal -->
+            <!-- end of credit modal -->
 
-            <!-- filter right of canvus -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="dt__filter" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                    <h5 id="offcanvasRightLabel">Filter Transactions</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <div class="col-12 mb-4">
-                        <div class="alert alert-info alert-border" role="alert">
-                            Use this section to filter the table to the way of your liking. Remember to submit your selection so as to submit the selections
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="mb-4">
-                            <label>Select a date range</label>
-
-                            <div class="input-daterange input-group" id="datepicker6" data-date-format="dd M, yyyy" data-date-autoclose="true" data-provide="datepicker" data-date-container='#datepicker6'>
-                                <input type="text" class="form-control date-drop-input" name="start" placeholder="Start Date" readonly />
-                                <input type="text" class="form-control date-drop-input" name="end" placeholder="End Date" readonly />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="mb-4">
-                            <label>Amount range</label>
-
-                            <div class="input-daterange input-group">
-                                <input type=" text " class="form-control " name="" placeholder="Min Amount" />
-                                <input type="text " class="form-control " name="" placeholder="Max Amount" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="mb-4">
-                            <label>Toll takers</label>
-                            <div class="row">
-                                <div class="col-md-12 col-lg-6">
-                                    <div class="form-check form-check-primary mb-3">
-                                        <input class="form-check-input" type="checkbox" id="allTollTakers" checked>
-                                        <label class="form-check-label text-capitalize" for="allTollTakers">
-                                            All toll takers
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 col-lg-6">
-                                    <div class="form-check form-check-primary mb-3">
-                                        <input class="form-check-input" type="checkbox" id="tollTaker1">
-                                        <label class="form-check-label text-capitalize" for="tollTaker1">
-                                            Kelvin Njuguna
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 col-lg-6">
-                                    <div class="form-check form-check-primary mb-3">
-                                        <input class="form-check-input" type="checkbox" id="tollTaker3">
-                                        <label class="form-check-label text-capitalize" for="tollTaker3">
-                                            Samoli Chillo
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 col-lg-6">
-                                    <div class="form-check form-check-primary mb-3">
-                                        <input class="form-check-input" type="checkbox" id="tollTaker4">
-                                        <label class="form-check-label text-capitalize" for="tollTaker4">
-                                            Alex Wanjala
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 col-lg-6">
-                                    <div class="form-check form-check-primary mb-3">
-                                        <input class="form-check-input" type="checkbox" id="tollTaker5">
-                                        <label class="form-check-label text-capitalize" for="tollTaker5">
-                                            Edwin Kiploman
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="mb-4">
-                            <button type="button" class="btn btn-primary waves-effect waves-light w-100">
-                                <i class="mdi mdi-filter-variant font-size-16 align-middle me-2"></i> Filter Table
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- of canvus -->
-
-
-
-            <footer class="footer ">
-                <div class="container-fluid ">
-                    <div class="row ">
-                        <div class="col-sm-6 ">
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © Best Birdy
+                            </script> © RevenueSure
                         </div>
-                        <div class="col-sm-6 ">
+                        <div class="col-sm-6">
                             <div class="text-sm-end d-sm-block ">
-                                Kenya Medical Training College
+                                Developed by Nouveta LTD.
                             </div>
                         </div>
                     </div>
@@ -707,20 +633,18 @@
     </div>
     <!-- END layout-wrapper -->
 
-
-
     <!-- Right bar overlay-->
     <div class="rightbar-overlay "></div>
 
-    <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js "></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
-
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
     <script src="assets/libs/metismenu/metisMenu.min.js "></script>
     <script src="assets/libs/simplebar/simplebar.min.js "></script>
     <script src="assets/libs/node-waves/waves.min.js "></script>
+
 
 
     <!-- Required datatable js -->
@@ -735,26 +659,17 @@
     <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
     <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
     <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
-    <!-- Bootstrap select -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
-
-    <script src="assets/libs/select2/js/select2.min.js"></script>
-    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
-    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
-    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
-    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
-    <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
-
-    <!-- form advanced init -->
-    <script src="assets/js/pages/form-advanced.init.js"></script>
-
+    <!-- numerals number formater -->
+    <script src="assets/libs/numeral/numeral.js "></script>
 
     <!-- Responsive examples -->
     <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
     <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
-    <!-- numerals number formater -->
-    <script src="assets/libs/numeral/numeral.js "></script>
+
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+    <!-- Plugins js -->
+    <script src="assets/libs/dropzone/min/dropzone.min.js "></script>
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js "></script>
 
@@ -762,6 +677,8 @@
     <script src="assets/js/app.js "></script>
     <script src="assets/js/custom.js "></script>
 </body>
+
+
 <!-- index.html   13:55:49 GMT -->
 
 </html>

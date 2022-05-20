@@ -7,15 +7,23 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Best Birdy | Connecting you to your world</title>
+    <title>KMTC calender categories</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Keep your finances and membership up to date" name="description" />
-    <meta content="Kelvin Njuguna Ndungu" name="author" />
+    <meta content="Rental management system by Nouveta LTD" name="description" />
+    <meta content="Kelvin Njuguna" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
+    <!-- droping file -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -23,11 +31,11 @@
     <!-- custom Css-->
     <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
 
-
 </head>
 
 <body data-sidebar="dark">
 
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
     <!-- Loader -->
     <div id="preloader">
         <div id="status">
@@ -89,6 +97,7 @@
 
 
                 </div>
+
                 <div class="d-flex">
                     <!-- small search -->
                     <div class="dropdown d-inline-block d-lg-none ms-2">
@@ -221,8 +230,6 @@
                             <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </header>
@@ -297,12 +304,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Toll charges</h4>
+                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Add User</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Toll charges</li>
+                                        <li class="breadcrumb-item"><a href="user-register.html">Users</a></li>
+                                        <li class="breadcrumb-item active">New User</li>
                                     </ol>
                                 </div>
 
@@ -312,153 +320,220 @@
                     <!-- end page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="card p-4">
+                            <div class="card">
                                 <div class="card-body">
+                                    <div class="row">
 
-                                    <h4 class="card-title">Toll charges by vehicle category</h4>
-                                    <p class="card-title-desc">You can add or change the charges for a specific vehicle category. remember to click save so as to reflect your changes otherwise any changes you make will not be effected</p>
 
-                                    <div class="table-responsive table-responsive-md">
-                                        <table class="table table-editable align-middle table-edits">
-                                            <thead>
-                                                <tr class="text-uppercase">
-                                                    <th>#</th>
-                                                    <th>Vehicle type</th>
-                                                    <th>Description</th>
-                                                    <th class="text-right">Charges</th>
-                                                    <th class="text-right">Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr data-id="1">
-                                                    <td style="width: 80px">1</td>
-                                                    <td data-field="name">Motor cycles</td>
-                                                    <td data-field="age">Motor cycles exceeding 50CC</td>
-                                                    <td data-field="amount" class="text-right">2,000</td>
-                                                    <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
-                                                    </td>
+                                        <div class="col-7">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">First Name <strong class="text-danger">*</strong></label>
+                                                        <input type="text" class="form-control" id="" placeholder="Enter first name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">Second Name <strong class="text-danger">*</strong></label>
+                                                        <input type="text" class="form-control" id="" placeholder="Enter second name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">Other Name(s)</label>
+                                                        <input type="text" class="form-control" id="" placeholder="Enter other names">
+                                                    </div>
+                                                </div>
 
-                                                </tr>
-                                                <tr data-id="2">
-                                                    <td style="width: 80px">2</td>
-                                                    <td data-field="name">Motor cars</td>
-                                                    <td data-field="age">light vehicle cars including campervan MPV'S(less than 8 passengers)<br> and their effects,taxi's,limosines,light vehicles towing a caravan<br> or trailer with any number of axles.</td>
-                                                    <td data-field="amount" class="text-right">2,500</td>
-                                                    <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
-                                                    </td>
+                                                <div class="col-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Department</label>
+                                                        <select class="form-control selectpicker" name="category" multiple title="Department" data-live-search="true">
+                                                           
+                                                            <option value="bg-danger">Finance</option>
+                                                            <option value="bg-success">Maintenance</option>
+                                                            <option value="bg-primary">Support Staff</option>
+                                                            
+                                                        </select>
+                                                    </div>
+                                                </div>
 
 
 
-                                                </tr>
-                                                <tr data-id="3">
-                                                    <td style="width: 80px">3</td>
-                                                    <td data-field="name">busses or coaches</td>
-                                                    <td data-field="age">busses or coaches (any number of axles any size) with a capacity<br> to carry 8 or more passengers.</td>
-                                                    <td data-field="amount" class="text-right">2,300</td>
-                                                    <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
-                                                    </td>
+                                                <div class="col-4">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">Work Title</label>
+                                                        <input type="text" class="form-control" id="" placeholder="Enter title">
+                                                    </div>
+                                                </div>
 
-                                                </tr>
-                                                <tr data-id="4">
-                                                    <td style="width: 80px">4</td>
-                                                    <td data-field="name">Light Good Vehicles</td>
-                                                    <td data-field="age">Good Vehicles,(Vans and any car with no rear window) <br>and adapted for goods .ie No back seats.<br> This includes car,vans,jeep type with back windows panelled out,<br> seats removed and all pick up
-                                                        types included. Whether in the course of trade or otherwise.</td>
-                                                    <td data-field="amount" class="text-right">2,600</td>
-                                                    <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
-                                                    </td>
-
-                                                </tr>
-                                                <tr data-id="5">
-                                                    <td style="width: 80px">5</td>
-                                                    <td data-field="name">Goods or Vehicles with two or three axles</td>
-                                                    <td data-field="age">Goods vehicles with a design gross vehicle weight exceeding 3,500 kilograms<br> and having 2 or 3 axles.</td>
-                                                    <td data-field="amount" class="text-right">2,000</td>
-                                                    <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
-                                                    </td>
-
-                                                </tr>
-                                                <tr data-id="6">
-                                                    <td style="width: 80px">6</td>
-                                                    <td data-field="name">Goods or vehicles with four or more axles</td>
-                                                    <td data-field="age">Goods vehicles with a design gross vehicle weight exceeding 3,500 kilograms<br> and having 4 or more axles.</td>
-                                                    <td data-field="amount" class="text-right">2,200</td>
-                                                    <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
-                                                    </td>
-
-                                                </tr>
-                                                <tr class="cloneCharges d-none">
-                                                    <td style="width: 80px" class="categoryIndex">#</td>
-                                                    <td data-field="name">
-                                                        <input type="text" class="form-control" placeholder="Enter Category">
-                                                    </td>
-                                                    <td data-field="age">
-                                                        <input type="text" class="form-control" placeholder="Category description">
-                                                    </td>
-                                                    <td data-field="amount" class="text-right">
-                                                        <input type="text" class="form-control" placeholder="UGX">
-                                                    </td>
-                                                    <td class="text-right cell-change">
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-new-btn mx-3" title="save">Save</button>
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle  btn-transparent cancel-new-category" title="Cancel"><i class="bx bx-x"></i></a>
-                                                    </td>
-                                                </tr>
+                                                <div class="col-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">System Role</label>
+                                                        <select class="form-control selectpicker" name="category" multiple title="Select system role" data-live-search="true">
+                                                           
+                                                            <option value="bg-danger">Super Admin</option>
+                                                            <option value="bg-success">Normal User</option>
+                                                            
+                                                        </select>
+                                                    </div>
+                                                </div>
 
 
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td colspan="5" class="bg-light add-field">
-                                                        <span class="d-flex align-items-center"><i class="dripicons-plus  mr-5 d-flex justify-content-center align-items-center font-21"></i><span class="pl-5">Add Toll Charge category</span></span>
-                                                    </td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
+
+
+                                                <div class="col-4">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">Email <strong class="text-danger">*</strong></label>
+                                                        <input type="email" class="form-control" id="" placeholder="email@email.com">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">Telephone Number <strong class="text-danger">*</strong></label>
+                                                        <input type="email" class="form-control" id="" placeholder="Phone number">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div>
+                                                <div class="row justify-content-center mt-5">
+                                                    <img src="assets/images/verification-img.png" style="width:300px" alt="" class="img-fluid d-block">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <button type="button " class="btn btn-primary waves-effect waves-light ">
+                                                <i class="mdi mdi-check-all font-size-16 align-middle me-2 "></i> Add user
+                                            </button>
+                                        </div>
+
                                     </div>
 
                                 </div>
+
                             </div>
                         </div>
                         <!-- end col -->
                     </div>
+
                     <!-- end row -->
-
-
                 </div>
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
 
+            <!-- credit modal -->
+            <div class="modal fade issue-modal pb-5 credit-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Credit Note for Kelvin Njuguna</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Landlord's Details</strong><br>
+                                     Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Lion Rock Apartments
+                                    <br><br>
+                                    <span class="today-date">1 Mar 2022</span><br>
+                                    <span class="fw-semibold">Being Created By </span> Alex Wanjala<br>
+                                </address>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Debit Amount</label>
+                                    <input type="text" class="form-control" placeholder="Enter amount">
+                                </div>
+                            </div>
 
-            <footer class="footer ">
-                <div class="container-fluid ">
-                    <div class="row ">
-                        <div class="col-sm-6 ">
+
+                            <div class=" col-12 ">
+                                <div class="mb-4 ">
+                                    <label class="text-capitalize ">Debit this amount to a Tenant</label>
+                                    <div class="row ">
+                                        <div class="col-auto ">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" value="yes" type="radio" name="debit-this" id="debit-yes">
+                                                <label class="form-check-label" for="debit-yes">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto ">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" value="no" type="radio" name="debit-this" id="debit-no">
+                                                <label class="form-check-label" for="debit-no">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-12 d-non debit-tenant-list d-none">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Select the Tenant</label>
+                                    <select class="form-control selectpicker" title="Select tenant" data-live-search="true">
+                                        <option value="001" data-content="<span class='d-none'>001</span> Amos were">Amos were</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-non'>002</span>Philip Mutua">Philip Mutua</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>003</span>Sharon Wambui">Sharon Wambui</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>004</span>Rita Kanana">Rita Kanana</option>
+                                        <option value="" data-content="<span class='badge badge-success file-nod-none'>005</span>Ernest Mburu">Ernest Mburu</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>006</span>Latasha Tasha">Latasha Tasha</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>007</span>Alex Wanjala">Alex Wanjala</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>008</span>Sam Ochieng">Sam Ochieng</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type ">Reason for creating the credit Note</label>
+                                    <textarea name=" " placeholder="Enter tenant 's reason for moving out" id="" cols="30" rows="3" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="mdi mdi-alert-outline me-2 "></i> A message will be sent to the landlord on the followingCredit Note
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Submit Details</button>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- end of credit modal -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © Best Birdy
+                            </script> © RevenueSure
                         </div>
-                        <div class="col-sm-6 ">
+                        <div class="col-sm-6">
                             <div class="text-sm-end d-sm-block ">
-                                Kenya Medical Training College
+                                Developed by Nouveta LTD.
                             </div>
                         </div>
                     </div>
@@ -470,34 +545,49 @@
     </div>
     <!-- END layout-wrapper -->
 
-
-
     <!-- Right bar overlay-->
-    <div class="rightbar-overlay"></div>
+    <div class="rightbar-overlay "></div>
 
-    <!-- JAVASCRIPT -->
-    <script src="assets/libs/jquery/jquery.min.js"></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/jquery/jquery.min.js "></script>
 
-    <!-- Table Editable plugin -->
-    <script src="assets/libs/table-edits/build/table-edits.min.js"></script>
-    <script src="assets/js/pages/table-editable.int.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
+    <script src="assets/libs/simplebar/simplebar.min.js "></script>
+    <script src="assets/libs/node-waves/waves.min.js "></script>
 
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
 
-    <!-- dashboard init -->
-    <script src="assets/js/pages/dashboard.init.js"></script>
 
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
+    <script src="assets/libs/jszip/jszip.min.js "></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
     <!-- numerals number formater -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="assets/libs/numeral/numeral.js "></script>
 
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
+
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+    <!-- Plugins js -->
+    <script src="assets/libs/dropzone/min/dropzone.min.js "></script>
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js "></script>
 
     <!-- App js -->
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js "></script>
+    <script src="assets/js/custom.js "></script>
 </body>
 
 

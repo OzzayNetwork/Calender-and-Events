@@ -3,11 +3,11 @@
     }
     
     body[data-sidebar=dark] .mm-active .active i {
-        color: #54becc!important;
+        color: #d49f47!important;
     }
     
     body[data-sidebar=dark] .mm-active .active {
-        color: #56becc!important;
+        color: #d49f47!important;
     }
     
     .breadcrumb-item+.breadcrumb-item::before {
@@ -754,11 +754,11 @@ padding: 0px;
     }
     
     body[data-sidebar=dark] .navbar-brand-box {
-        background: #0e132c;
+        background: #480215;
     }
     
     body[data-sidebar=dark] .vertical-menu {
-        background: #0d1125;
+        background: #63001a;
     }
     
     .navbar-brand-box .logo-sm {
@@ -768,7 +768,7 @@ padding: 0px;
     }
     
     body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul ul {
-        background-color: #0e132c;
+        background-color: #480215;
     }
     
     body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul>li:hover>a {
@@ -787,7 +787,7 @@ padding: 0px;
     
     .side-bar-button span {
         font-size: 14px;
-        color: #0d1125;
+        color: #63001a;
         font-weight: 500;
     }
     
