@@ -1178,6 +1178,13 @@ padding: 0px;
         }
     }
     
+    .sq-1 {
+        background: black;
+        width: 15px;
+        height: 15px;
+        /* display: block; */
+    }
+    
     @media screen and (max-width: 767px) {
         div.dt-buttons {
             width: auto;
