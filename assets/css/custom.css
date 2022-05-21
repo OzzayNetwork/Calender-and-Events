@@ -1200,3 +1200,7 @@ padding: 0px;
     .text-orange {
         color: orange !important;
     }
+    
+    body[data-sidebar=dark] .menu-title {
+        color: #b52a50;
+    }

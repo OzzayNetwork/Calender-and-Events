@@ -1,7 +1,7 @@
 //Bundle usage summary
 var walletOptions = {
-    series: [76, 67, 61],
-    chart: { height: 362, type: "radialBar" },
+    series: [76, 67],
+    chart: { height: 262, type: "radialBar" },
     plotOptions: {
         radialBar: {
             offsetY: 0,
@@ -54,8 +54,8 @@ var walletOptions = {
         }
     },
     stroke: { lineCap: "round" },
-    colors: ["#556ee6", "#e83e8c", "#00a884"],
-    labels: ["Permits", "Maintenance", "Penalties"],
+    colors: ["#556ee6", "#e83e8c"],
+    labels: ["Closed Events", "Upcoming Events"],
     legend: { show: !1 }
 };
 (chart = new ApexCharts(document.querySelector("#sent-bundles"), walletOptions)).render();
@@ -77,7 +77,7 @@ var options = {
         plotOptions: {
             bar: {
                 horizontal: !1,
-                columnWidth: "45%",
+                columnWidth: "75%",
                 // endingShape: "rounded"
             }
         },
@@ -101,21 +101,16 @@ var options = {
 
             },
             title: {
-                text: "Amount Collections in KES",
+                text: "Events in Hrs",
             }
         },
         series: [{
-                name: "Permits",
-                data: [4023658, 5123456, 41458975, 67123654, 22123654, 43789654, 36789623, 52320365, 24023147, 18012586, 36036985, 48025820]
-            }, {
-                name: "Maintenance",
-                data: [13025856, 23025632, 20032145, 8021457, 13032568, 27456987, 18235897, 22235789, 10213214, 16365478, 24456987, 22123568]
-            },
-            {
-                name: "Penalties",
-                data: [1325856, 2325632, 2032145, 802147, 1303268, 27456987, 1823897, 2223789, 1013214, 1636478, 2445987, 2213568]
-            }
-        ],
+            name: "2021",
+            data: [2000, 5123, 4145, 6712, 2212, 4378, 3678, 5232, 2402, 1801, 3603, 4802]
+        }, {
+            name: "2022",
+            data: [13025, 2302, 2003, 8021, 1303, 2745, 18235, 2223, 10213, 1636, 2445, 2212]
+        }],
         xaxis: {
             categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         },
@@ -241,7 +236,7 @@ var options = {
                     series.forEach((s) => {
                         currentTotal += s[dataPointIndex]
                     })
-                    return "<span class='text-right w-100 d-flex' > KES " + numeral(value).format('0,0') + "</span> "
+                    return "<span class='text-right w-100 d-flex' > " + numeral(value).format('0,0') + " Hrs</span> "
 
                 }
             }

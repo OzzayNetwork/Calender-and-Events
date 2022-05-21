@@ -243,7 +243,7 @@
                 <div id="sidebar-menu">
                     <!-- Left Menu Start -->
                     <ul class="metismenu list-unstyled text-capitalize" id="side-menu">
-                        <li class="menu-title" key="t-pages">KMTC Calendar & Events system</li>
+                        <li class="menu-title" key="t-pages">KMTC Calendar & File Manager</li>
 
                         <li>
                             <a href="index.html" class="waves-effect">
@@ -325,222 +325,156 @@
                     </div>
                     <!-- end page title -->
                     <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+                        <div class="col-xl-3">
+                            <div class="card calc-h-3px">
+                                <div class="card-body pb-5">
 
-                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        <h4 class="card-title text-capitalize mb-0 ">
-                                            Cases and case files
-                                        </h4>
-
-                                        <div class="d-flex">
-                                            <a href="members-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3 d-none">
-                                                <i class="mdi  mdi-folder-plus  font-size-16"></i> <span class="pl-1 d-md-inline">Add An event</span>
-                                            </a>
-
-                                            <div class="text-sm-end">
-                                                <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3 text-capitalize"><i class="mdi mdi-plus label-icon"></i> Add a case</button>
-                                            </div>
+                                    <div>
+                                        <div class="mb-4 me-3">
+                                            <i class="bx bx-shield-alt text-primary h1"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-capitalize">Damage of Property <span class="badge badge-pill badge-soft-success font-size-11">Case Open</span></h5>
+                                            <span class="text-muted">1234568</span>
 
                                         </div>
-
-
-                                    </div>
-                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
-                                        <button type="button" class="btn btn-danger waves-effect btn-label waves-light me-3 d-none"><i class="bx  bx-trash label-icon"></i> Block</button>
-                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-plus label-icon"></i> Message Auctioneer(s)</button>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
-                                        <thead class="table-light">
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Case title</th>
-                                                <th>Case No.</th>
-                                                <th scope="col">Plaintiff</th>
-                                                <th scope="col">Defendant</th>
-                                                <th scope="col">Files</th>
-                                                <th scope="col">Created on</th>
-                                                <th scope="col">Case status</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-capitalize">1</td>
-                                                <td class="text-capitalize">
-                                                    <a href="case-files-percase.html">Exam irregularity</a>
-                                                </td>
-                                                <td>
-                                                    12345689
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    Ole Sankale
-                                                </td>
-
-                                                <td class="text-capitalize">
-                                                    Innocent Ochieng
-                                                </td>
-                                                <td>
-                                                    12
-                                                </td>
-                                                <td>
-                                                    12 Jan 2022
-                                                </td>
-                                                <td>
-                                                    <strong>Ongoing</strong>
-                                                </td>
 
 
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
+                                <div class="card-body border-top pb-2 pt-3">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="text-muted">
+                                                <table class="table table-borderless mb-0 table-sm table-striped">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Plaintiff</td>
+                                                            <td class="pb-0"><span class="text-black">Joy Mwende</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Defendant</td>
+                                                            <td class="pb-0"><span class="text-black">Paul Njogu</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Date added</td>
+                                                            <td class="pb-0"><span class="text-black">12 Jan 2022</span></td>
+                                                        </tr>
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="case-files-percase.html"><i class="font-size-15 mdi mdi-file-eye me-3"></i>View Files</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-progress-close me-3"></i>Declare case as cleared</a>
-                                                            <a class="dropdown-item" data-toggle="modal" data-target=".add-file-modal" href="#"><i class="font-size-15  mdi mdi-text-box-plus me-3"></i>Add File</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-capitalize">2</td>
-                                                <td class="text-capitalize">
-                                                    <a href="case-files-percase.html">Damage of school property</a>
-                                                </td>
-                                                <td>
-                                                    12365
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    Fredrick Ouma
-                                                </td>
-
-                                                <td class="text-capitalize">
-                                                    Job Bonyo
-                                                </td>
-                                                <td>
-                                                    12
-                                                </td>
-                                                <td>
-                                                    20 Feb 2020
-                                                </td>
-                                                <td>
-                                                    <strong>Closed on 14 Mar 2021 </strong>
-                                                </td>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Added by</td>
+                                                            <td class="pb-0"><span class="text-black">Alex Wanjala</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Number of files<address></address></td>
+                                                            <td class="pb-0"><span class="text-black">32 Files</span></td>
+                                                        </tr>
 
 
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
+                                                    </tbody>
+                                                </table>
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="case-files-percase.html"><i class="font-size-15 mdi mdi-file-eye me-3"></i>View Files</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-progress-close me-3"></i>Declare case as cleared</a>
-                                                            <a class="dropdown-item" data-toggle="modal" data-target=".add-file-modal" href="#"><i class="font-size-15  mdi mdi-text-box-plus me-3"></i>Add File</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-capitalize">3</td>
-                                                <td class="text-capitalize">
-                                                    <a href="case-files-percase.html">Forging of School documents</a>
-                                                </td>
-                                                <td>
-                                                    2256
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    Sebastian Kiura
-                                                </td>
-
-                                                <td class="text-capitalize">
-                                                    Felix Owiti
-                                                </td>
-                                                <td>
-                                                    32
-                                                </td>
-                                                <td>
-                                                    20 Feb 2020
-                                                </td>
-                                                <td>
-                                                    <strong>Closed on 14 Mar 2021 </strong>
-                                                </td>
-
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="case-files-percase.html"><i class="font-size-15 mdi mdi-file-eye me-3"></i>View Files</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-progress-close me-3"></i>Declare case as cleared</a>
-                                                            <a class="dropdown-item" data-toggle="modal" data-target=".add-file-modal" href="#"><i class="font-size-15  mdi mdi-text-box-plus me-3"></i>Add File</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-capitalize">4</td>
-                                                <td class="text-capitalize">
-                                                    <a href="case-files-percase.html">Violent conduct</a>
-                                                </td>
-                                                <td>
-                                                    3685
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    Tabitha Wanjiru
-                                                </td>
-
-                                                <td class="text-capitalize">
-                                                    Wayne Wade
-                                                </td>
-                                                <td>
-                                                    32
-                                                </td>
-                                                <td>
-                                                    20 Feb 2020
-                                                </td>
-                                                <td>
-                                                    <strong>Closed on 14 Mar 2021 </strong>
-                                                </td>
-
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="case-files-percase.html"><i class="font-size-15 mdi mdi-file-eye me-3"></i>View Files</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-progress-close me-3"></i>Declare case as cleared</a>
-                                                            <a class="dropdown-item" data-toggle="modal" data-target=".add-file-modal" href="#"><i class="font-size-15  mdi mdi-text-box-plus me-3"></i>Add File</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                    </div>
                                 </div>
+
+
                             </div>
                         </div>
-                        <!-- end col -->
+
+                        <div class="col-xl-9">
+
+                            <div class="card calc-h-3px">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="p-4">
+                                                <h5 class="mb-0 pb-0">Tenant Documents</h5>
+
+                                                <div class="row">
+
+                                                    <div class="col-12">
+                                                        <div class="table-responsive">
+                                                            <table class="table align-middle table-nowrap table-hover mb-0" id="datatable-buttons">
+                                                                <thead>
+                                                                    <tr class="text-capitalize">
+                                                                        <th></th>
+                                                                        <th scope="col">File</th>
+                                                                        <th scope="col">Date added</th>
+                                                                        <th>Added by</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1.</td>
+                                                                        <td><a href="javascript: void(0);" class="text-dark fw-medium"><i class="mdi mdi-image font-size-16 align-middle text-success me-2"></i> National Id Card</a></td>
+                                                                        <td>12-10-2020, 09:45</td>
+                                                                        <td>09 KB</td>
+                                                                        <td>
+                                                                            <a type="button" class="btn btn-primary waves-effect waves-light me-2 btn-sm w-md">
+                                                                                <i class="mdi mdi-eye-outline  font-size-16 align-middle me-2"></i> View File
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2.</td>
+                                                                        <td><a href="javascript: void(0);" class="text-dark fw-medium"><i class="mdi mdi-file-pdf font-size-16 align-middle text-danger me-2"></i> KRA Pin</a></td>
+                                                                        <td>11-10-2020, 17:05</td>
+                                                                        <td>115 KB</td>
+                                                                        <td>
+                                                                            <a type="button" class="btn btn-primary waves-effect waves-light me-2 btn-sm w-md">
+                                                                                <i class="mdi mdi-eye-outline  font-size-16 align-middle me-2"></i> View File
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3.</td>
+                                                                        <td><a href="javascript: void(0);" class="text-dark fw-medium"><i class="mdi mdi-file-pdf font-size-16 align-middle text-danger me-2"></i> MCA Tenancy agreement</a></td>
+                                                                        <td>11-10-2020, 13:26</td>
+                                                                        <td>Kelvin Mwendia</td>
+                                                                        <td>
+                                                                            <a type="button" class="btn btn-primary waves-effect waves-light me-2 btn-sm w-md">
+                                                                                <i class="mdi mdi-eye-outline  font-size-16 align-middle me-2"></i> View File
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>4.</td>
+                                                                        <td><a href="javascript: void(0);" class="text-dark fw-medium"><i class="mdi mdi-file-pdf font-size-16 align-middle text-danger me-2"></i> Bank statements</a></td>
+                                                                        <td>10-10-2020, 11:32</td>
+                                                                        <td>Caleb Mumo</td>
+                                                                        <td>
+                                                                            <a type="button" class="btn btn-primary waves-effect waves-light me-2 btn-sm w-md">
+                                                                                <i class="mdi mdi-eye-outline  font-size-16 align-middle me-2"></i> View File
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="p-2 border-top d-grid mt-3">
+                                    <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)" data-toggle="modal" data-target=".add-file-modal">
+                                        <i class="bx bx-plus me-1 font-18px"></i> <span key="t-view-more">Add A file</span>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
 
                     <!-- end row -->
